@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import isProjectLatest from "../helpers/isProjectLatest";
 import { leftArrow } from "../actions/leftArrow";
 import { rightArrow } from "../actions/rightArrow";
+import arrow from "../images/arrow.svg";
 import Left from "../images/leftarrow.svg";
 import Right from "../images/rightarrow.svg";
 import "../stylesheets/Latest.scss";
@@ -27,11 +28,16 @@ function Latest(props) {
           </div>
           <div className="project--links ">
             <div className="project--view bottomline">
-              <button>View Case</button>
+              <p>View case</p>
+              <img className="arrow--image" src={arrow} alt="linkarrow" />
             </div>
 
             <div className="project--link">
-              <a href="https://www.w3schools.com">View Website</a>
+              <p>View website</p>
+
+              <a href="https://www.w3schools.com">
+                <img className="arrow--image" src={arrow} alt="linkarrow" />
+              </a>
             </div>
           </div>
         </div>

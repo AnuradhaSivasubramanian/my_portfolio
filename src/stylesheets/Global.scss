@@ -1,7 +1,9 @@
 /*COLORS*/
-$primary-color-1: #145cc6;
-$primary-color-2: #ff0013;
-$primary-color-3: #ffb000;
+$pink: #cc6666;
+$mustard: #ffb000;
+$blue: #004fe7;
+$blue-green: #00b3b3;
+$red: #ff0013;
 
 /*FONTS*/
 $font-roboto: "Roboto";
@@ -22,7 +24,6 @@ $margin: 10px;
   font-family: $font-alfa;
   text-align: right;
   font-size: $h2;
-  font-weight: 700;
   color: black;
   width: 98%;
   margin-top: $margin;

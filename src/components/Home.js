@@ -25,9 +25,6 @@ export default function Home() {
         </div>
       </div>
       <div className="home--latestprojects">
-        {/* <div className="home--project_title topline bottomline">
-          <p className="home--project_title_text">Latest Projects</p>
-        </div> */}
         <div className="home--project_content">
           <Latest />
         </div>
