@@ -1,0 +1,51 @@
+@import "../stylesheets/Global.scss";
+
+.home--wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+.home--latestprojects {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home--title {
+  display: flex;
+  background-color: white;
+  &_text {
+    margin-left: $margin;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+.home--desc {
+  flex-grow: 1;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  &_summary {
+    width: 70%;
+    margin-left: 15%;
+    display: flex;
+    align-self: center;
+    justify-items: center;
+    font-size: 2em;
+  }
+}
+.home--project_title {
+  display: flex;
+  background-color: white;
+  &_text {
+    margin-left: $margin;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+.home--project_content {
+  flex-grow: 1;
+}

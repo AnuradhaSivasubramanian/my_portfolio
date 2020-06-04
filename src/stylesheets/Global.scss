@@ -1,0 +1,47 @@
+/*COLORS*/
+$primary-color-1: #145cc6;
+$primary-color-2: #ff0013;
+$primary-color-3: #ffb000;
+
+/*FONTS*/
+$font-roboto: "Roboto";
+$font-alfa: "Alfa Slab One", cursive;
+$font-sourcecode: "Source Code Pro", monospace;
+$font-desc: "Abril Fatface", cursive;
+
+/*FONT SIZE*/
+$h1: 4rem;
+$h2: 2rem;
+$copy: 0.9rem;
+$copy-small: 0.8rem;
+
+/*MARGIN*/
+$margin: 10px;
+
+.home--heading {
+  font-family: $font-alfa;
+  text-align: right;
+  font-size: $h2;
+  font-weight: 700;
+  color: black;
+  width: 98%;
+  margin-top: $margin;
+  background-color: white;
+}
+#root {
+  height: 100vh;
+}
+
+body {
+  font-family: $font-roboto;
+  font-size: $copy;
+  height: 100%;
+}
+
+.topline {
+  border-top: solid 3px black;
+  width: 100%;
+}
+.bottomline {
+  border-bottom: solid 3px black;
+}

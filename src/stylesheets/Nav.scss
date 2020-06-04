@@ -1,0 +1,26 @@
+@import "../stylesheets/Global.scss";
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-size: 0.8rem;
+  color: white;
+  background-color: black;
+
+  width: 100%;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+.nav--home {
+  padding: $margin;
+}
+.nav--items {
+  width: 40%;
+  padding-top: $margin;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
