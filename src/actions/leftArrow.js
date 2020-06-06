@@ -1,3 +1,4 @@
+import isProjectLatest from "../helpers/isProjectLatest";
 export function leftArrow() {
   return function (dispatch, getState) {
     const state = getState();
@@ -5,6 +6,11 @@ export function leftArrow() {
       dispatch({
         type: "LEFT_ARROW",
         index: state.slider.index - 1,
+      });
+    } else {
+      dispatch({
+        type: "LEFT_ARROW",
+        index: isProjectLatest().length - 1,
       });
     }
   };

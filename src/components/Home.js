@@ -16,7 +16,7 @@ export default function Home() {
         <div className="home--heading_name">Sivasubramanian</div>
       </div>
       <div className="home--title topline bottomline">
-        <p className="home--title_text">JUNIOR FULL STACK WEB DEVELOPER</p>
+        <p className="home--title_text">FULL STACK WEB DEVELOPER</p>
       </div>
       <div className="home--desc">
         <div className="home--desc_summary">

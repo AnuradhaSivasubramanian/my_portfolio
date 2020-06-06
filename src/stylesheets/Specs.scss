@@ -1,0 +1,128 @@
+@import "../stylesheets/Global.scss";
+
+.specs--heading {
+  font-family: $font-alfa;
+  font-size: $h2;
+  color: black;
+  margin: $margin;
+  background-color: white;
+}
+@media screen and (min-width: 760px) {
+  .specs--heading {
+    font-size: 3em;
+  }
+}
+.specs--title {
+  display: flex;
+  background-color: white;
+  &_text {
+    margin-left: $margin;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+  }
+}
+
+.specs--wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.specs--details {
+  font-family: $font-roboto;
+  flex-grow: 1;
+}
+.specs--details_border {
+  height: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.specs--info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: $margin;
+  font-size: 1.2em;
+}
+.specs--left,
+.specs--right {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.specs--label {
+  font-weight: bold;
+  font-family: $font-desc;
+}
+@media screen and (min-width: 760px) {
+  .specs--left,
+  .specs--right {
+    font-size: 2em;
+  }
+}
+.specs--summary {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  &_p {
+    align-self: center;
+  }
+}
+@media screen and (min-width: 760px) {
+  .specs--summary {
+    font-size: 3em;
+  }
+}
+.specs--btn {
+  align-self: center;
+  font-family: $font-roboto;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  &:hover {
+    color: #000080;
+  }
+}
+.specs--url_link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000080;
+  font-size: 1em;
+  cursor: pointer;
+}
+// @media screen and (min-width: 760px) {
+//   .specs--url_link {
+//     font-size: 1.5em;
+//   }
+// }
+.specs--back {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $margin;
+  margin-right: $margin;
+  justify-content: right;
+  align-items: flex-end;
+}
+.specs--back_link {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+  margin-bottom: $margin;
+  cursor: pointer;
+  &:hover {
+    color: #000080;
+  }
+}

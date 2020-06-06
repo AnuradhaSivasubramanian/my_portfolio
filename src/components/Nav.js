@@ -11,9 +11,12 @@ export default function Nav() {
           <Link to="/">Home</Link>
         </div>
         <div className="nav--items">
-          <Link to="/projects">Projects</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/projects" className="nav--links">
+            Projects
+          </Link>
+          <Link to="/about" className="nav--links">
+            About Me
+          </Link>
         </div>
       </nav>
     </div>

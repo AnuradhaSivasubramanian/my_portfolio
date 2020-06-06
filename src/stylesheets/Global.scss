@@ -25,9 +25,14 @@ $margin: 10px;
   text-align: right;
   font-size: $h2;
   color: black;
-  width: 98%;
-  margin-top: $margin;
+  padding-top: $margin;
+  padding-right: $margin;
   background-color: white;
+}
+@media screen and (min-width: 760px) {
+  .home--heading {
+    font-size: 2.5em;
+  }
 }
 #root {
   height: 100vh;
@@ -41,8 +46,10 @@ body {
 
 .topline {
   border-top: solid 3px black;
+
   width: 100%;
 }
+
 .bottomline {
   border-bottom: solid 3px black;
 }

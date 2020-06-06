@@ -1,0 +1,57 @@
+@import "../stylesheets/Global.scss";
+
+.about--desc {
+  flex-grow: 1;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &_summary {
+    margin-top: $margin;
+    width: 80%;
+    display: flex;
+    align-self: center;
+    justify-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333333;
+    background: #ffffff;
+    text-shadow: 2px 2px 0px #ffffff, 5px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+  &_skills {
+    margin-top: $margin;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-items: center;
+    font-size: 1.2em;
+
+    &_p {
+      font-weight: bold;
+    }
+    &_ul {
+      margin: $margin;
+    }
+  }
+}
+@media screen and (min-width: 760px) {
+  .about--desc {
+    &_summary {
+      font-size: 2.5em;
+    }
+    &_skills {
+      font-size: 2em;
+    }
+  }
+}
+.about--links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.about--link_image {
+  width: 40px;
+}

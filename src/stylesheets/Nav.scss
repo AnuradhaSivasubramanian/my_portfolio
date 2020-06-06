@@ -22,5 +22,18 @@ nav {
   padding-top: $margin;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+}
+@media screen and (min-width: 760px) {
+  .nav--home,
+  .nav--items {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .nav--items {
+    width: 25%;
+  }
+}
+.nav--links {
+  flex-grow: 1;
 }

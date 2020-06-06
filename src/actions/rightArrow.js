@@ -8,6 +8,11 @@ export function rightArrow() {
         type: "RIGHT_ARROW",
         index: state.slider.index + 1,
       });
+    } else {
+      dispatch({
+        type: "RIGHT_ARROW",
+        index: 0,
+      });
     }
   };
 }
