@@ -1,43 +1,16 @@
 import elaskitchen from "../images/elaskitchen.png";
-import wildams from "../images/bookies.png";
-import elascasino from "../images/bookies.png";
+import wildams from "../images/wildamsterdam.png";
+import elascasino from "../images/elascasino.png";
 import oneliner from "../images/oneliner.png";
-import codewomen from "../images/bookies.png";
+import codewomen from "../images/codewoman.png";
 import bookies from "../images/bookies.png";
-import coolwall from "../images/bookies.png";
+import coolwall from "../images/coolwall.png";
 let pink = "#cc6666";
 let mustard = "#ffb000";
 let blue = "#004fe7";
 let blue_green = "#00b3b3";
 let red = "#ff0013";
 const projects = [
-  {
-    title: "Cool Wall",
-    specs: "lorem Ipsum",
-    url: "https://github.com/software-bastards/charlies-bastards-cool-wall",
-    date: "31-1-2020",
-    client: "Software Bastards",
-    product: "Web App",
-    usedTechnologies: "React HTML CSS Redux thunk Nodejs mySQL",
-    latest: true,
-    image: coolwall,
-    left: mustard,
-    right: blue_green,
-  },
-  {
-    title: "Wild Amsterdam",
-    specs:
-      "Wild Amsterdam is a static HTML page travel photo blog. It is built using HTML and bootstrap.",
-    url: "https://anuradhasivasubramanian.github.io/Wild-Amsterdam/index.html",
-    date: "31-1-2020",
-    client: "Personal",
-    product: "Static HTML Page",
-    usedTechnologies: "HTML CSS Javascript Bootstrap",
-    latest: true,
-    image: wildams,
-    left: blue,
-    right: red,
-  },
   {
     title: "One Liners",
     specs:
@@ -51,6 +24,20 @@ const projects = [
     image: oneliner,
     left: mustard,
     right: pink,
+  },
+  {
+    title: "Cool Wall",
+    specs:
+      "Coolwall is a WebApp built for Software Bastards. It is a voting web app where users can vote for technologies to be cool, uncool or subzero. Coolwall also has an admin dashbord page which can be accessed using a secured login. This app is in its final stages of completion and is yet to be deployed.",
+    url: "https://github.com/software-bastards/charlies-bastards-cool-wall",
+    date: "31-1-2020",
+    client: "Software Bastards",
+    product: "Web App",
+    usedTechnologies: "React HTML CSS Redux thunk Nodejs mySQL",
+    latest: true,
+    image: coolwall,
+    left: mustard,
+    right: blue_green,
   },
   {
     title: "Code Women",
@@ -107,6 +94,20 @@ const projects = [
     image: bookies,
     left: blue,
     right: pink,
+  },
+  {
+    title: "Wild Amsterdam",
+    specs:
+      "Wild Amsterdam is a static HTML page travel photo blog. It is built using HTML and bootstrap.",
+    url: "https://anuradhasivasubramanian.github.io/Wild-Amsterdam/index.html",
+    date: "31-1-2020",
+    client: "Personal",
+    product: "Static HTML Page",
+    usedTechnologies: "HTML CSS Javascript Bootstrap",
+    latest: true,
+    image: wildams,
+    left: blue,
+    right: red,
   },
 ];
 

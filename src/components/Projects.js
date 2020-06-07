@@ -30,25 +30,24 @@ export function Projects(props) {
                 <div className="project--title_text"> {item.title}</div>
               </div>
               <div className="project--links ">
-                <div className="project--view bottomline">
-                  <p>View case</p>
-                  <Link to="/specs">
-                    <img
-                      onClick={() =>
-                        props.dispatch({
-                          type: "SELECT_PROJECT",
-                          project: item,
-                        })
-                      }
-                      className="arrow--image"
-                      src={arrow}
-                      alt="linkarrow"
-                    />
+                <div>
+                  <Link
+                    to="/specs"
+                    className="project--view bottomline"
+                    onClick={() =>
+                      props.dispatch({
+                        type: "SELECT_PROJECT",
+                        project: item,
+                      })
+                    }
+                  >
+                    <p>View case</p>
+                    <img className="arrow--image" src={arrow} alt="linkarrow" />
                   </Link>
                 </div>
-                <div className="project--link">
-                  <p>View website</p>
-                  <a href={item.url}>
+                <div>
+                  <a href={item.url} className="project--link">
+                    <p>View website</p>
                     <img className="arrow--image" src={arrow} alt="linkarrow" />
                   </a>
                 </div>
