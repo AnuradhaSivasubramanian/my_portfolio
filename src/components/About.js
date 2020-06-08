@@ -20,8 +20,10 @@ export default function About() {
       </div>
       <div className="about--desc">
         <div className="about--desc_summary">
-          I am an aspiring self motivated full stack web developer with a
-          passion for responsive design and learning new skills.
+          A software engineer by education and a former Montessori Teacher, I
+          recently completed my full stack web development training. I enjoy
+          coding challenges, board games and solving puzzles like Sudoku when I
+          am not building apps.
         </div>
         <div className="about--desc_skills">
           <p className="about--desc_skills_p">Key Technical Skills</p>
