@@ -4,18 +4,35 @@ nav {
   justify-content: space-between;
   flex-direction: row;
   font-size: 0.8rem;
-  color: white;
-  background-color: black;
-
   width: 100%;
 
   a {
-    color: white;
     text-decoration: none;
   }
 }
+.nav--mode_icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(85%) sepia(12%) saturate(1%) hue-rotate(314deg) brightness(84%)
+    contrast(87%);
+  cursor: pointer;
+}
 .nav--home {
-  padding: $margin;
+  width: 20%;
+  padding-bottom: $margin-sm;
+  padding-left: $margin;
+  display: flex;
+  flex-direction: row;
+}
+.nav--mode {
+  &_icon {
+    flex-grow: 1;
+    padding-top: 8px;
+  }
+  &_home {
+    flex-grow: 1;
+    padding-top: $margin;
+  }
 }
 .nav--items {
   width: 40%;
@@ -28,10 +45,23 @@ nav {
   .nav--items {
     font-size: 2em;
   }
+  .nav--mode_icon {
+    width: 25px;
+    height: 25px;
+    padding-top: $margin;
+  }
 }
 @media screen and (min-width: 1000px) {
   .nav--items {
     width: 25%;
+  }
+  .nav--home {
+    width: 10%;
+  }
+  .nav--mode_icon {
+    width: 25px;
+    height: 25px;
+    padding-top: $margin;
   }
 }
 .nav--links {

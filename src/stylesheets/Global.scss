@@ -19,15 +19,21 @@ $copy-small: 0.8rem;
 
 /*MARGIN*/
 $margin: 10px;
-
+$margin-sm: 5px;
+.dark_mode {
+  background-color: black;
+  color: #b3b3b3;
+}
+.light_mode {
+  background-color: #b3b3b3;
+  color: black;
+}
 .home--heading {
   font-family: $font-alfa;
   text-align: right;
   font-size: $h2;
-  color: black;
   padding-top: $margin;
   padding-right: $margin;
-  background-color: white;
 }
 @media screen and (min-width: 760px) {
   .home--heading {
@@ -44,12 +50,21 @@ body {
   height: 100%;
 }
 
-.topline {
+.topline_d {
+  border-top: solid 3px #b3b3b3;
+
+  width: 100%;
+}
+
+.bottomline_d {
+  border-bottom: solid 3px #b3b3b3;
+}
+.topline_l {
   border-top: solid 3px black;
 
   width: 100%;
 }
 
-.bottomline {
+.bottomline_l {
   border-bottom: solid 3px black;
 }

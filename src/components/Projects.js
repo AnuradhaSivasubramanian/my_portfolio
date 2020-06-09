@@ -12,10 +12,22 @@ export function Projects(props) {
       <div className="home--nav">
         <Nav />
       </div>
-      <div className="projects--heading">
+      <div
+        className={
+          props.mode
+            ? "projects--heading dark_mode"
+            : "projects--heading light_mode"
+        }
+      >
         <div className="projects--heading_name">Projects</div>
       </div>
-      <div className="projects--title topline bottomline">
+      <div
+        className={
+          props.mode
+            ? "projects--title  dark_mode topline_d bottomline_d"
+            : "projects--title  light_mode topline_l bottomline_l"
+        }
+      >
         <p className="projects--title_text">OVERVIEW OF PROJECTS</p>
       </div>
       <div className="projects--list">
@@ -23,23 +35,45 @@ export function Projects(props) {
           <div key={index} className="projects--list_map">
             <div
               className="list--project_left"
-              style={{ background: `${item.left}` }}
+              style={
+                props.mode
+                  ? { background: `${item.left_dark}` }
+                  : { background: `${item.left_light}` }
+              }
             >
-              <div className="project--index bottomline">0{index + 1}</div>
-              <div className="project--title bottomline">
+              <div
+                className={
+                  props.mode
+                    ? "project--index bottomline_d"
+                    : "project--index bottomline_l"
+                }
+              >
+                0{index + 1}
+              </div>
+              <div
+                className={
+                  props.mode
+                    ? "project--title bottomline_d"
+                    : "project--title bottomline_l"
+                }
+              >
                 <div className="project--title_text"> {item.title}</div>
               </div>
               <div className="project--links ">
                 <div>
                   <Link
                     to="/specs"
-                    className="project--view bottomline"
-                    onClick={() =>
+                    className={
+                      props.mode
+                        ? "project--view bottomline_d"
+                        : "project--view bottomline_l"
+                    }
+                    onClick={() => {
                       props.dispatch({
                         type: "SELECT_PROJECT",
                         project: item,
-                      })
-                    }
+                      });
+                    }}
                   >
                     <p>View case</p>
                     <img className="arrow--image" src={arrow} alt="linkarrow" />
@@ -55,7 +89,11 @@ export function Projects(props) {
             </div>
             <div
               className="list--project_right"
-              style={{ background: `${item.right}` }}
+              style={
+                props.mode
+                  ? { background: `${item.right_dark}` }
+                  : { background: `${item.right_light}` }
+              }
             >
               <img
                 className="list--project_img"
@@ -72,6 +110,7 @@ export function Projects(props) {
 const mapStateToProps = (state) => {
   return {
     project: state.selected.project,
+    mode: state.mode.dark,
   };
 };
 

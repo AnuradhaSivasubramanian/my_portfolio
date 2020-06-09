@@ -1,29 +1,56 @@
 import React from "react";
 import Nav from "./Nav";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import "../stylesheets/Specs.scss";
 
 export function Specs(props) {
+  if (!props.project.title) {
+    return <Redirect to="/projects" />;
+  }
   return (
-    <div className="specs--wrapper">
+    <div
+      className={
+        props.mode ? "specs--wrapper dark_mode" : "specs--wrapper light_mode"
+      }
+    >
       <div className="home--nav">
         <Nav />
       </div>
-      <div className="specs--heading">
+      <div
+        className={
+          props.mode ? "specs--heading dark_mode" : "specs--heading light_mode"
+        }
+      >
         <div className="specs--heading_name">{props.project.title}</div>
       </div>
-      <div className="specs--title topline bottomline">
+      <div
+        className={
+          props.mode
+            ? "specs--title topline_d bottomline_d"
+            : "specs--title topline_l bottomline_l"
+        }
+      >
         <p className="specs--title_text">PROJECT SPECIFICATIONS</p>
       </div>
       <div className="specs--details">
         <div className="specs--details_border">
-          <div className="specs--summary bottomline">
+          <div
+            className={
+              props.mode
+                ? "specs--summary bottomline_d"
+                : "specs--summary bottomline_l"
+            }
+          >
             <p className="specs--summary_p">{props.project.specs}</p>
           </div>
           <div
             className="specs--info"
-            style={{ background: `${props.project.left}` }}
+            style={
+              props.mode
+                ? { background: `${props.project.left_dark}` }
+                : { background: `${props.project.left_light}` }
+            }
           >
             {" "}
             <div className="specs--left">
@@ -68,6 +95,7 @@ export function Specs(props) {
 const mapStateToProps = (state) => {
   return {
     project: state.selected.project,
+    mode: state.mode.dark,
   };
 };
 

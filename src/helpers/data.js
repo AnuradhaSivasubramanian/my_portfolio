@@ -6,10 +6,15 @@ import codewomen from "../images/codewoman.png";
 import bookies from "../images/bookies.png";
 import coolwall from "../images/coolwall.png";
 let pink = "#cc6666";
+let lightpink = " #e6b3b3";
 let mustard = "#ffb000";
+let lightmustard = " #ffe7b3";
 let blue = "#004fe7";
+let lightblue = "#669cff";
 let blue_green = "#00b3b3";
+let lightblue_green = "#80ffff";
 let red = "#ff0013";
+let lightred = "#ff8088";
 const projects = [
   {
     title: "One Liners",
@@ -22,8 +27,10 @@ const projects = [
     usedTechnologies: "React HTML CSS Javascript",
     latest: true,
     image: oneliner,
-    left: mustard,
-    right: pink,
+    left_light: mustard,
+    right_light: pink,
+    left_dark: lightmustard,
+    right_dark: lightpink,
   },
   {
     title: "Cool Wall",
@@ -36,8 +43,10 @@ const projects = [
     usedTechnologies: "React HTML CSS Redux thunk Nodejs mySQL",
     latest: true,
     image: coolwall,
-    left: mustard,
-    right: blue_green,
+    left_light: blue,
+    right_light: red,
+    left_dark: lightblue,
+    right_dark: lightred,
   },
   {
     title: "Code Women",
@@ -50,8 +59,10 @@ const projects = [
     usedTechnologies: "React HTML CSS Javascript",
     latest: false,
     image: codewomen,
-    left: blue,
-    right: red,
+    left_light: mustard,
+    right_light: blue_green,
+    left_dark: lightmustard,
+    right_dark: lightblue_green,
   },
   {
     title: "Ela's Kitchen",
@@ -64,8 +75,10 @@ const projects = [
     usedTechnologies: "React HTML CSS Javascript",
     latest: true,
     image: elaskitchen,
-    left: blue,
-    right: blue_green,
+    left_light: blue,
+    right_light: blue_green,
+    left_dark: lightblue,
+    right_dark: lightblue_green,
   },
   {
     title: "Ela's Casino",
@@ -78,8 +91,10 @@ const projects = [
     usedTechnologies: "React HTML CSS Javascript",
     latest: true,
     image: elascasino,
-    left: red,
-    right: blue,
+    left_light: red,
+    right_light: blue,
+    left_dark: lightred,
+    right_dark: lightblue,
   },
   {
     title: "Bookies",
@@ -92,8 +107,10 @@ const projects = [
     usedTechnologies: "React Redux thunk HTML CSS Javascript",
     latest: true,
     image: bookies,
-    left: blue,
-    right: pink,
+    left_light: blue,
+    right_light: pink,
+    left_dark: lightblue,
+    right_dark: lightpink,
   },
   {
     title: "Wild Amsterdam",
@@ -106,8 +123,10 @@ const projects = [
     usedTechnologies: "HTML CSS Javascript Bootstrap",
     latest: true,
     image: wildams,
-    left: blue,
-    right: red,
+    left_light: blue,
+    right_light: red,
+    left_dark: lightblue,
+    right_dark: lightred,
   },
 ];
 

@@ -3,9 +3,8 @@
 .specs--heading {
   font-family: $font-alfa;
   font-size: $h2;
-  color: black;
+
   margin: $margin;
-  background-color: white;
 }
 @media screen and (min-width: 760px) {
   .specs--heading {
@@ -14,7 +13,7 @@
 }
 .specs--title {
   display: flex;
-  background-color: white;
+
   &_text {
     margin-left: $margin;
     display: flex;
@@ -41,6 +40,7 @@
   justify-content: center;
 }
 .specs--info {
+  color: black;
   flex-grow: 1;
   display: flex;
   flex-direction: row;
