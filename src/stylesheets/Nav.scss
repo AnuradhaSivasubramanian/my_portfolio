@@ -20,8 +20,10 @@ nav {
   filter: invert(85%) sepia(12%) saturate(1%) hue-rotate(314deg) brightness(84%)
     contrast(87%);
   cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   &:hover {
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
 }
@@ -36,7 +38,6 @@ nav {
   &_icon {
     -webkit-flex-grow: 1;
     flex-grow: 1;
-
     padding-top: 8px;
   }
   &_home {

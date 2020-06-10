@@ -86,6 +86,7 @@
   font-size: 1.5em;
   &_p {
     width: 90%;
+    -webkit-align-self: center;
     align-self: center;
   }
 }
@@ -95,6 +96,7 @@
   }
 }
 .specs--btn {
+  -webkit-align-self: center;
   align-self: center;
   font-family: $font-roboto;
   background-color: black;
@@ -113,11 +115,7 @@
   font-size: 1em;
   cursor: pointer;
 }
-// @media screen and (min-width: 760px) {
-//   .specs--url_link {
-//     font-size: 1.5em;
-//   }
-// }
+
 .specs--back {
   display: flex;
   flex-direction: column;
