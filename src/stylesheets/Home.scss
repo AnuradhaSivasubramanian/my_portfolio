@@ -13,7 +13,6 @@
   flex-direction: column;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  height: 100%;
 }
 
 .home--title {
@@ -68,7 +67,6 @@
 .home--project_content {
   -webkit-flex-grow: 1;
   flex-grow: 1;
-  height: 100%;
 }
 @media only screen and (min-device-width: 550px) and (max-device-height: 415px) {
   .home--desc {
