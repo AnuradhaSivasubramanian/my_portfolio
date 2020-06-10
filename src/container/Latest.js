@@ -16,7 +16,9 @@ function Latest(props) {
   return (
     <div className="latest--wrapper">
       <div
-        className="latest--arrow"
+        className={
+          props.mode ? "latest--arrow dark_mode" : "latest--arrow light_mode"
+        }
         onClick={() => {
           props.dispatch(leftArrow());
           setleftClick(true);
@@ -27,7 +29,11 @@ function Latest(props) {
           }, 1000);
         }}
       >
-        <img className="arrowicon" src={Left} alt="lefticon" />
+        <img
+          className={props.mode ? "arrowicon_d" : "arrowicon"}
+          src={Left}
+          alt="lefticon"
+        />
       </div>
       <div
         className={
@@ -109,7 +115,9 @@ function Latest(props) {
         </div>
       </div>
       <div
-        className="latest--arrow"
+        className={
+          props.mode ? "latest--arrow dark_mode" : "latest--arrow light_mode"
+        }
         onClick={() => {
           props.dispatch(rightArrow());
           setrightClick(true);
@@ -119,7 +127,11 @@ function Latest(props) {
           }, 1000);
         }}
       >
-        <img className="arrowicon" src={Right} alt="lefticon" />
+        <img
+          className={props.mode ? "arrowicon_d" : "arrowicon"}
+          src={Right}
+          alt="lefticon"
+        />
       </div>
     </div>
   );
