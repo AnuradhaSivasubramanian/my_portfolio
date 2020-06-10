@@ -3,7 +3,6 @@
 .specs--heading {
   font-family: $font-alfa;
   font-size: $h2;
-
   margin: $margin;
 }
 @media screen and (min-width: 760px) {
@@ -29,10 +28,12 @@
 }
 .specs--details {
   font-family: $font-roboto;
+  -webkit-flex-grow: 1;
   flex-grow: 1;
 }
 .specs--details_border {
   height: 100%;
+  -webkit-flex-grow: 1;
   flex-grow: 1;
 
   display: flex;
@@ -41,6 +42,7 @@
 }
 .specs--info {
   color: black;
+  -webkit-flex-grow: 1;
   flex-grow: 1;
   display: flex;
   flex-direction: row;
@@ -52,6 +54,7 @@
 .specs--right {
   display: flex;
   flex-direction: column;
+  -webkit-flex-grow: 1;
   flex-grow: 1;
   justify-content: space-between;
 }
@@ -67,6 +70,7 @@
   }
 }
 .specs--summary {
+  -webkit-flex-grow: 1;
   flex-grow: 1;
   width: 100%;
   display: flex;

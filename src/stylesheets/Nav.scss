@@ -26,10 +26,13 @@ nav {
 }
 .nav--mode {
   &_icon {
+    -webkit-flex-grow: 1;
     flex-grow: 1;
+
     padding-top: 8px;
   }
   &_home {
+    -webkit-flex-grow: 1;
     flex-grow: 1;
     padding-top: $margin;
   }
@@ -38,6 +41,7 @@ nav {
   width: 40%;
   padding-top: $margin;
   display: flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
 }
 @media screen and (min-width: 760px) {
@@ -65,5 +69,6 @@ nav {
   }
 }
 .nav--links {
+  -webkit-flex-grow: 1;
   flex-grow: 1;
 }

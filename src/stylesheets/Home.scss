@@ -57,13 +57,13 @@
   }
 }
 .home--project_content {
-  flex-grow: 1;
   -webkit-flex-grow: 1;
+  flex-grow: 1;
 }
 @media only screen and (min-device-width: 550px) and (max-device-height: 415px) {
   .home--desc {
-    flex-grow: 0;
     -webkit-flex-grow: 0;
+    flex-grow: 0;
 
     &_summary {
       font-size: 1.5em;
@@ -71,13 +71,13 @@
     }
   }
   .home--latestprojects {
-    flex-grow: o;
     -webkit-flex-grow: 0;
+    flex-grow: o;
   }
 
   .home--project_content {
-    flex-grow: 0;
     -webkit-flex-grow: 0;
+    flex-grow: 0;
   }
 }
 @media screen and (min-width: 760px) {
