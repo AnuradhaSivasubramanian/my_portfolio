@@ -16,6 +16,7 @@
   &_text {
     margin-left: $margin;
     display: flex;
+    -webkit-justify-content: flex-start;
     justify-content: flex-start;
     font-weight: bold;
   }
@@ -24,7 +25,7 @@
 .specs--wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
 }
 .specs--details {
   font-family: $font-roboto;
@@ -38,6 +39,7 @@
 
   display: flex;
   flex-direction: column;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 .specs--info {
@@ -46,6 +48,7 @@
   flex-grow: 1;
   display: flex;
   flex-direction: row;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
   padding: $margin;
   font-size: 1.2em;
@@ -56,6 +59,7 @@
   flex-direction: column;
   -webkit-flex-grow: 1;
   flex-grow: 1;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
 }
 
@@ -75,6 +79,8 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
   align-items: center;
   justify-content: center;
   font-size: 1.5em;
@@ -117,6 +123,8 @@
   flex-direction: column;
   margin-bottom: $margin;
   margin-right: $margin;
+  -webkit-justify-content: right;
+  -webkit-align-items: flex-end;
   justify-content: right;
   align-items: flex-end;
 }

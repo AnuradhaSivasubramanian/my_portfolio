@@ -1,6 +1,7 @@
 @import "../stylesheets/Global.scss";
 nav {
   display: flex;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
   flex-direction: row;
   font-size: 0.8rem;

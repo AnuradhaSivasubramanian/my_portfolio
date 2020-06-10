@@ -21,6 +21,7 @@
   &_text {
     margin-left: $margin;
     display: flex;
+    -webkit-justify-content: flex-start;
     justify-content: flex-start;
     font-weight: bold;
   }
@@ -60,6 +61,8 @@
   flex-grow: 2;
   height: 100%;
   display: flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
   justify-content: center;
   align-items: center;
 }
@@ -76,5 +79,6 @@
 .list--project_img {
   width: 200px;
   height: 200px;
+  -webkit-box-shadow: 0px 3px 24px 12px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 3px 24px 12px rgba(0, 0, 0, 0.6);
 }

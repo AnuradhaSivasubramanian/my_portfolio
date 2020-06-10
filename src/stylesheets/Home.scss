@@ -76,8 +76,8 @@
   }
 
   .home--project_content {
-    -webkit-flex-grow: 0;
-    flex-grow: 0;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
   }
 }
 @media screen and (min-width: 760px) {
