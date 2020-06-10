@@ -43,16 +43,16 @@
   margin-top: $margin;
   font-family: $font-desc;
   background-color: #ffb000;
-  height: 40vh;
+  height: 270px;
 }
 @media screen and (min-width: 550px) and (max-height: 415px) {
   .projects--list_map {
-    height: 70vh;
+    height: 300px;
   }
 }
-@media screen and (min-width: 800px) and (max-height: 415px) {
+@media screen and (min-width: 760px) {
   .projects--list_map {
-    height: 100vh;
+    height: 300px;
   }
 }
 .list--project_right {

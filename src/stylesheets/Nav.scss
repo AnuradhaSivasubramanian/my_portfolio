@@ -9,6 +9,9 @@ nav {
 
   a {
     text-decoration: none;
+    &:hover {
+      color: $blue;
+    }
   }
 }
 .nav--mode_icon {
@@ -17,6 +20,10 @@ nav {
   filter: invert(85%) sepia(12%) saturate(1%) hue-rotate(314deg) brightness(84%)
     contrast(87%);
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 .nav--home {
   width: 20%;

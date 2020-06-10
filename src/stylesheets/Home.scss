@@ -35,6 +35,8 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  padding-top: 15px;
+  padding-bottom: $margin;
 
   &_summary {
     width: 70%;
@@ -71,8 +73,8 @@
     }
   }
   .home--latestprojects {
-    -webkit-flex-grow: 0;
-    flex-grow: o;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
   }
 
   .home--project_content {
