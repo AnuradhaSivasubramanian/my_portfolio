@@ -28,6 +28,7 @@
   -webkit-align-items: center;
   align-items: center;
   background-color: black;
+  overflow: hidden;
 }
 @media screen and (min-device-width: 550px) and (max-device-height: 415px) {
   .latest--wrapper {
