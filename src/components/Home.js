@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import "../stylesheets/Global.scss";
 import "../stylesheets/Home.scss";
 const title = "FULL STACK WEB DEVELOPER";
+const random = " ULFTACEKBDVOPRWS ";
 
 class Home extends React.Component {
   state = {
@@ -14,20 +15,16 @@ class Home extends React.Component {
   };
   componentDidMount = () => {
     let newtitle = [...this.state.finaltitle];
-    newtitle[this.state.index] = String.fromCharCode(
-      Math.floor(Math.random() * 25) + 66
-    );
+    newtitle[this.state.index] = random[Math.floor(Math.random() * 17)];
     this.setState({ finaltitle: [...newtitle] });
     setTimeout(this.counter1, 400);
   };
   counter1 = () => {
     if (this.state.finaltitle[this.state.index] !== title[this.state.index]) {
       let newtitle = [...this.state.finaltitle];
-      newtitle[this.state.index] = String.fromCharCode(
-        Math.floor(Math.random() * 25) + 66
-      );
+      newtitle[this.state.index] = random[Math.floor(Math.random() * 17)];
       this.setState({ finaltitle: [...newtitle] });
-      setTimeout(this.counter1, 10);
+      setTimeout(this.counter1, 3);
     } else if (this.state.finaltitle.join("") !== title) {
       if (title[this.state.index + 1] === " ") {
         this.setState({
@@ -40,7 +37,7 @@ class Home extends React.Component {
           index: this.state.index + 1,
         });
       }
-      setTimeout(this.counter1, 10);
+      setTimeout(this.counter1, 3);
     }
   };
   counter2 = () => {
