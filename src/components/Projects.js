@@ -70,8 +70,8 @@ export function Projects(props) {
                     to="/specs"
                     className={
                       props.mode
-                        ? "project--view bottomline_thin_d"
-                        : "project--view bottomline_thin_l"
+                        ? "project--view dark_mode bottomline_thin_d"
+                        : "project--view light_mode bottomline_thin_l"
                     }
                     onClick={() => {
                       props.dispatch({
@@ -89,7 +89,14 @@ export function Projects(props) {
                   </Link>
                 </div>
                 <div>
-                  <a href={item.url} className="project--link">
+                  <a
+                    href={item.url}
+                    className={
+                      props.mode
+                        ? "project--link dark_mode"
+                        : "project--link light_mode"
+                    }
+                  >
                     <p>Website</p>
                     <img
                       className={props.mode ? "arrow--image_d" : "arrow--image"}
