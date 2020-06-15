@@ -3,8 +3,6 @@ import { connect } from "react-redux";
 import isProjectLatest from "../helpers/isProjectLatest";
 import { leftArrow } from "../actions/leftArrow";
 import { rightArrow } from "../actions/rightArrow";
-import arrow from "../images/arrow.svg";
-import Left from "../images/leftarrow.svg";
 import Right from "../images/rightarrow.svg";
 import { Link } from "react-router-dom";
 import "../stylesheets/Latest.scss";
@@ -14,27 +12,41 @@ function Latest(props) {
   let latest = isProjectLatest();
 
   return (
-    <div className="latest--wrapper">
-      <div
-        className={
-          props.mode ? "latest--arrow dark_mode" : "latest--arrow light_mode"
-        }
-        onClick={() => {
-          props.dispatch(leftArrow());
-          setleftClick(true);
+    <div
+      className={
+        props.mode ? "latest--wrapper dark_mode" : "latest--wrapper light_mode"
+      }
+    >
+      <div className="latest--prev_next_wrapper ">
+        <div
+          className="latest--prev"
+          onClick={() => {
+            props.dispatch(leftArrow());
+            setleftClick(true);
 
-          setTimeout(() => {
-            setleftClick(false);
-            setrightClick(false);
-          }, 1000);
-        }}
-      >
-        <img
-          className={props.mode ? "arrowicon_d" : "arrowicon"}
-          src={Left}
-          alt="lefticon"
-        />
+            setTimeout(() => {
+              setleftClick(false);
+              setrightClick(false);
+            }, 1000);
+          }}
+        >
+          Prev
+        </div>
+        <div
+          className="latest--next"
+          onClick={() => {
+            props.dispatch(rightArrow());
+            setrightClick(true);
+            setTimeout(() => {
+              setleftClick(false);
+              setrightClick(false);
+            }, 1000);
+          }}
+        >
+          Next
+        </div>
       </div>
+
       <div
         className={
           leftClick
@@ -43,18 +55,13 @@ function Latest(props) {
             ? "latest--project rightclick"
             : "latest--project"
         }
-        style={
-          props.mode
-            ? { background: `${latest[props.index].left_dark}` }
-            : { background: `${latest[props.index].left_light}` }
-        }
       >
         <div className="project--left">
           <div
             className={
               props.mode
-                ? "project--index bottomline_d"
-                : "project--index bottomline_l"
+                ? "project--index bottomline_thin_d"
+                : "project--index bottomline_thin_l"
             }
           >
             0{props.index + 1}
@@ -62,8 +69,8 @@ function Latest(props) {
           <div
             className={
               props.mode
-                ? "project--title bottomline_d"
-                : "project--title bottomline_l"
+                ? "project--title bottomline_thin_d"
+                : "project--title bottomline_thin_l"
             }
           >
             <div className="project--title_text">
@@ -76,8 +83,8 @@ function Latest(props) {
                 to="/specs"
                 className={
                   props.mode
-                    ? "project--view bottomline_d"
-                    : "project--view bottomline_l"
+                    ? "project--view dark_mode bottomline_thin_d"
+                    : "project--view light_mode bottomline_thin_l"
                 }
                 onClick={() =>
                   props.dispatch({
@@ -86,52 +93,41 @@ function Latest(props) {
                   })
                 }
               >
-                <p>View case</p>
-                <img className="arrow--image" src={arrow} alt="linkarrow" />
+                <p>Details</p>
+                <img
+                  className={props.mode ? "arrow--image_d" : "arrow--image"}
+                  src={Right}
+                  alt="linkarrow"
+                />
               </Link>
             </div>
 
             <div>
-              <a href={latest[props.index].url} className="project--link">
-                <p>View website</p>
-                <img className="arrow--image" src={arrow} alt="linkarrow" />
+              <a
+                href={latest[props.index].url}
+                className={
+                  props.mode
+                    ? "project--link a_dark "
+                    : "project--link a_light "
+                }
+              >
+                <p>Website</p>
+                <img
+                  className={props.mode ? "arrow--image_d" : "arrow--image"}
+                  src={Right}
+                  alt="linkarrow"
+                />
               </a>
             </div>
           </div>
         </div>
-        <div
-          className="project--right"
-          style={
-            props.mode
-              ? { background: `${latest[props.index].right_dark}` }
-              : { background: `${latest[props.index].right_light}` }
-          }
-        >
+        <div className="project--right">
           <img
             className="project--img"
             src={latest[props.index].image}
             alt="project"
           />
         </div>
-      </div>
-      <div
-        className={
-          props.mode ? "latest--arrow dark_mode" : "latest--arrow light_mode"
-        }
-        onClick={() => {
-          props.dispatch(rightArrow());
-          setrightClick(true);
-          setTimeout(() => {
-            setleftClick(false);
-            setrightClick(false);
-          }, 1000);
-        }}
-      >
-        <img
-          className={props.mode ? "arrowicon_d" : "arrowicon"}
-          src={Right}
-          alt="lefticon"
-        />
       </div>
     </div>
   );

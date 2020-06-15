@@ -20,15 +20,30 @@
 }
 .latest--wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
   height: 100%;
   -webkit-align-items: center;
   align-items: center;
-  background-color: black;
+
   overflow: hidden;
+}
+.latest--prev_next_wrapper {
+  padding-top: $margin;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+}
+.latest--prev {
+  margin: $margin;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.latest--next {
+  margin: $margin;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 @media screen and (min-device-width: 550px) and (max-device-height: 415px) {
   .latest--wrapper {
@@ -56,45 +71,59 @@
   -webkit-tap-highlight-color: transparent;
 }
 .project--img {
-  width: 110px;
-  height: 110px;
-  -webkit-transform: rotate(15deg);
-  transform: rotate(15deg);
-  box-shadow: 0px 3px 24px 12px rgba(0, 0, 0, 0.6);
+  width: 250px;
+  height: 200px;
 }
 @media only screen and (min-device-width: 550px) and (max-device-height: 415px) {
   .project--img {
-    width: 120px;
-    height: 120px;
+    width: 270px;
+    height: 220px;
   }
 }
-@media screen and (min-width: 760px) {
+
+@media screen and (max-width: 400px) {
   .project--img {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 180px;
+  }
+}
+
+//laptops
+@media screen and (min-width: 750px) {
+  .project--img {
+    width: 440px;
+    height: 300px;
   }
 }
 .arrow--image {
-  width: 25px;
+  width: 10px;
   cursor: pointer;
 
   &:hover {
     filter: invert(9%) sepia(77%) saturate(4954%) hue-rotate(239deg)
       brightness(84%) contrast(137%);
   }
+  &_d {
+    width: 10px;
+    cursor: pointer;
+    filter: invert(86%) sepia(4%) saturate(923%) hue-rotate(314deg)
+      brightness(108%) contrast(89%);
+  }
 }
 .latest--project {
-  font-family: $font-desc;
+  font-family: $font-roboto;
   display: flex;
   flex-direction: row;
   -webkit-align-items: center;
   -webkit-justify-content: space-evenly;
   align-items: center;
   justify-content: space-evenly;
-  width: 80%;
+  width: 90%;
   height: 80%;
   -webkit-transition: background-color 2s ease;
   transition: background-color 2s ease;
+  padding-bottom: $margin;
+  padding-top: 20px;
 }
 .rightclick {
   -webkit-animation: rightslide 1s forwards ease;
@@ -128,8 +157,8 @@
 }
 
 .project--right {
-  -webkit-flex-grow: 2;
-  flex-grow: 2;
+  -webkit-flex-grow: 4;
+  flex-grow: 4;
 
   height: 100%;
   display: flex;
@@ -141,9 +170,8 @@
 .project--left {
   -webkit-flex-grow: 1;
   flex-grow: 1;
-
-  width: 30%;
-  height: 100%;
+  width: 20%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   -webkit-flex-flow: column;
@@ -151,22 +179,23 @@
 }
 
 .project--index {
-  font-size: 2.5rem;
+  font-size: 1.4em;
   padding-left: $margin;
 }
 
 .project--title {
   padding-left: $margin;
+  padding-top: $margin;
   display: flex;
   -webkit-align-items: center;
   align-items: center;
-  font-size: 1.6em;
-  -webkit-flex-grow: 2;
-  flex-grow: 2;
+  font-size: 1.4em;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
 }
-@media screen and (max-device-width: 400px) {
+@media screen and (max-device-width: 350px) {
   .project--title {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 @media screen and (min-device-width: 760px) {
@@ -176,10 +205,10 @@
 }
 
 .project--links {
-  padding-left: $margin;
-  padding-right: $margin;
-  -webkit-flex-grow: 2;
-  flex-grow: 2;
+  // padding-left: $margin;
+  // padding-right: $margin;
+  //-webkit-flex-grow: 2;
+  //flex-grow: 2;
   font-size: 1em;
   display: flex;
   flex-direction: column;
@@ -192,14 +221,13 @@
   }
 }
 .project--view {
+  padding-left: $margin;
   text-decoration: none;
-  color: black;
   display: flex;
   -webkit-align-items: center;
   align-items: center;
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
-
+  //-webkit-flex-grow: 1;
+  //flex-grow: 1;
   justify-content: space-between;
   &:hover {
     color: #000080;
@@ -207,7 +235,7 @@
 }
 .project--link {
   text-decoration: none;
-  color: black;
+  padding-left: $margin;
   display: flex;
   -webkit-align-items: center;
   align-items: center;

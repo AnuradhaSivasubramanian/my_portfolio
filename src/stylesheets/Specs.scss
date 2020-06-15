@@ -1,9 +1,11 @@
 @import "../stylesheets/Global.scss";
 
 .specs--heading {
-  font-family: $font-alfa;
+  font-family: $font-poppins;
+  text-align: right;
   font-size: $h2;
-  margin: $margin;
+  padding-top: 8%;
+  padding-right: $margin;
 }
 @media screen and (min-width: 760px) {
   .specs--heading {
@@ -19,6 +21,11 @@
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
     font-weight: bold;
+  }
+}
+@media screen and (min-width: 760px) {
+  .specs--title {
+    font-size: 1.7em;
   }
 }
 
@@ -43,36 +50,34 @@
   justify-content: center;
 }
 .specs--info {
-  color: black;
   -webkit-flex-grow: 1;
   flex-grow: 1;
-  display: flex;
-  flex-direction: row;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  padding: $margin;
-  font-size: 1.2em;
-}
-.specs--left,
-.specs--right {
+
   display: flex;
   flex-direction: column;
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+
+  padding: 20px;
+  font-size: 1.1em;
 }
 
 .specs--label {
   font-weight: bold;
-  font-family: $font-desc;
 }
-@media screen and (min-width: 760px) {
-  .specs--left,
-  .specs--right {
-    font-size: 1.6em;
-  }
+.specs--date,
+.specs--product,
+.specs--client,
+.specs--url,
+.specs--usedTechnologies {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: right;
 }
+.specs--usedTechnologies_p {
+  width: 60%;
+}
+
 .specs--summary {
   -webkit-flex-grow: 1;
   flex-grow: 1;
@@ -83,11 +88,15 @@
   -webkit-justify-content: center;
   align-items: center;
   justify-content: center;
-  font-size: 1.5em;
+
   &_p {
-    width: 90%;
-    -webkit-align-self: center;
-    align-self: center;
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin-left: 0px;
   }
 }
 @media screen and (min-width: 760px) {
@@ -100,12 +109,22 @@
   align-self: center;
   font-family: $font-roboto;
   background-color: black;
-  color: white;
-  padding: 10px;
+  color: $pastelpink;
+  padding-left: 10px;
+  padding-right: 10px;
   font-size: 1em;
   cursor: pointer;
   &:hover {
     color: #000080;
+  }
+  &_d {
+    -webkit-align-self: center;
+    align-self: center;
+    background-color: $pastelpink;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1em;
   }
 }
 .specs--url_link {

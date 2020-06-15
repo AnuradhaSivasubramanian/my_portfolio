@@ -1,7 +1,8 @@
 import React from "react";
 import Nav from "./Nav";
 import projects from "../helpers/data";
-import arrow from "../images/arrow.svg";
+import Right from "../images/rightarrow.svg";
+
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import "../stylesheets/Projects.scss";
@@ -30,22 +31,26 @@ export function Projects(props) {
       >
         <p className="projects--title_text">OVERVIEW OF PROJECTS</p>
       </div>
-      <div className="projects--list">
+      <div
+        className={
+          props.mode ? "projects--list dark_mode" : "projects--list light_mode"
+        }
+      >
         {projects.map((item, index) => (
-          <div key={index} className="projects--list_map">
-            <div
-              className="list--project_left"
-              style={
-                props.mode
-                  ? { background: `${item.left_dark}` }
-                  : { background: `${item.left_light}` }
-              }
-            >
+          <div
+            key={index}
+            className={
+              props.mode
+                ? "projects--list_map bottomline_d"
+                : "projects--list_map bottomline_l"
+            }
+          >
+            <div className="list--project_left">
               <div
                 className={
                   props.mode
-                    ? "project--index bottomline_d"
-                    : "project--index bottomline_l"
+                    ? "project--index bottomline_thin_d"
+                    : "project--index bottomline_thin_l"
                 }
               >
                 0{index + 1}
@@ -53,8 +58,8 @@ export function Projects(props) {
               <div
                 className={
                   props.mode
-                    ? "project--title bottomline_d"
-                    : "project--title bottomline_l"
+                    ? "project--title bottomline_thin_d"
+                    : "project--title bottomline_thin_l"
                 }
               >
                 <div className="project--title_text"> {item.title}</div>
@@ -65,8 +70,8 @@ export function Projects(props) {
                     to="/specs"
                     className={
                       props.mode
-                        ? "project--view bottomline_d"
-                        : "project--view bottomline_l"
+                        ? "project--view bottomline_thin_d"
+                        : "project--view bottomline_thin_l"
                     }
                     onClick={() => {
                       props.dispatch({
@@ -75,26 +80,27 @@ export function Projects(props) {
                       });
                     }}
                   >
-                    <p>View case</p>
-                    <img className="arrow--image" src={arrow} alt="linkarrow" />
+                    <p>Details</p>
+                    <img
+                      className={props.mode ? "arrow--image_d" : "arrow--image"}
+                      src={Right}
+                      alt="linkarrow"
+                    />
                   </Link>
                 </div>
                 <div>
                   <a href={item.url} className="project--link">
-                    <p>View website</p>
-                    <img className="arrow--image" src={arrow} alt="linkarrow" />
+                    <p>Website</p>
+                    <img
+                      className={props.mode ? "arrow--image_d" : "arrow--image"}
+                      src={Right}
+                      alt="linkarrow"
+                    />
                   </a>
                 </div>
               </div>
             </div>
-            <div
-              className="list--project_right"
-              style={
-                props.mode
-                  ? { background: `${item.right_dark}` }
-                  : { background: `${item.right_light}` }
-              }
-            >
+            <div className="list--project_right">
               <img
                 className="list--project_img"
                 src={item.image}

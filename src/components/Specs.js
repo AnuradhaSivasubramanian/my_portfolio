@@ -45,27 +45,40 @@ export function Specs(props) {
             <p className="specs--summary_p">{props.project.specs}</p>
           </div>
           <div
-            className="specs--info"
-            style={
-              props.mode
-                ? { background: `${props.project.left_dark}` }
-                : { background: `${props.project.left_light}` }
+            className={
+              props.mode ? "specs--info dark_mode" : "specs--info light_mode"
             }
           >
-            {" "}
-            <div className="specs--left">
+            <div
+              className={props.mode ? "bottomline_thin_d" : "bottomline_thin_l"}
+            >
+              {" "}
               <div className="specs--date">
                 <p className="specs--label">Date</p>
                 <p>{props.project.date}</p>
               </div>
+            </div>
+            <div
+              className={props.mode ? "bottomline_thin_d" : "bottomline_thin_l"}
+            >
               <div className="specs--product">
                 <p className="specs--label">Product</p>
                 <p>{props.project.product}</p>
               </div>
+            </div>
+            <div
+              className={props.mode ? "bottomline_thin_d" : "bottomline_thin_l"}
+            >
+              {" "}
               <div className="specs--client">
                 <p className="specs--label">Client</p>
                 <p>{props.project.client}</p>
               </div>
+            </div>
+            <div
+              className={props.mode ? "bottomline_thin_d" : "bottomline_thin_l"}
+            >
+              {" "}
               <div className="specs--url">
                 <p className="specs--label">View Website</p>
 
@@ -74,17 +87,21 @@ export function Specs(props) {
                 </a>
               </div>
             </div>
-            <div className="specs--right">
-              <div className="specs--usedTechnologies">
-                <p className="specs--label">Used Technologies</p>
-                <p> {props.project.usedTechnologies}</p>
-              </div>
 
-              <div className="specs--back">
-                <Link to="/projects" className="specs--back_link">
-                  <button className="specs--btn"> Back</button>
-                </Link>
-              </div>
+            <div className="specs--usedTechnologies">
+              <p className="specs--label">Tech Stack</p>
+              <p className="specs--usedTechnologies_p">
+                {" "}
+                {props.project.usedTechnologies}
+              </p>
+            </div>
+            <div className="specs--back">
+              <Link to="/projects" className="specs--back_link">
+                <button className={props.mode ? "specs--btn_d" : "specs--btn"}>
+                  {" "}
+                  Back
+                </button>
+              </Link>
             </div>
           </div>
         </div>

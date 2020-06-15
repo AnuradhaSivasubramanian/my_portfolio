@@ -1,36 +1,22 @@
-import elaskitchen from "../images/elaskitchen.png";
-import wildams from "../images/wildamsterdam.png";
-import elascasino from "../images/elascasino.png";
-import oneliner from "../images/oneliner.png";
-import codewomen from "../images/codewoman.png";
-import bookies from "../images/bookies.png";
-import coolwall from "../images/coolwall.png";
-let pink = "#cc6666";
-let lightpink = " #e6b3b3";
-let mustard = "#ffb000";
-let lightmustard = " #ffe7b3";
-let blue = "#004fe7";
-let lightblue = "#669cff";
-let blue_green = "#00b3b3";
-let lightblue_green = "#80ffff";
-let red = "#ff0013";
-let lightred = "#ff8088";
+import elaskitchen from "../gifs/elaskitchen.gif";
+import wildams from "../gifs/wildamsterdam.gif";
+import elascasino from "../gifs/elascasino.gif";
+import oneliner from "../gifs/oneliner.gif";
+import codewomen from "../gifs/codewoman.gif";
+import bookies from "../gifs/bookies.gif";
+import coolwall from "../gifs/coolwall.gif";
 const projects = [
   {
-    title: "One Liners",
+    title: "Wild Amsterdam",
     specs:
-      "Oneliners is a full stack app where users can submit oneliners. Users can also vote for their favourite vote. Oneliners is deployed using Heroku.",
-    url: " https://oneliners-fullstack.herokuapp.com/",
+      "Wild Amsterdam is a static HTML page travel photo blog. It is built using HTML and bootstrap.",
+    url: "https://anuradhasivasubramanian.github.io/Wild-Amsterdam/index.html",
     date: "31-1-2020",
     client: "Personal",
-    product: "Web App",
-    usedTechnologies: "React HTML CSS Javascript",
+    product: "Static HTML Page",
+    usedTechnologies: "HTML CSS Javascript Bootstrap",
     latest: true,
-    image: oneliner,
-    left_light: mustard,
-    right_light: pink,
-    left_dark: lightmustard,
-    right_dark: lightpink,
+    image: wildams,
   },
   {
     title: "Cool Wall",
@@ -43,10 +29,6 @@ const projects = [
     usedTechnologies: "React HTML CSS Redux thunk Nodejs mySQL",
     latest: true,
     image: coolwall,
-    left_light: blue,
-    right_light: red,
-    left_dark: lightblue,
-    right_dark: lightred,
   },
   {
     title: "Code Women",
@@ -56,13 +38,9 @@ const projects = [
     date: "31-1-2020",
     client: "Hackathon",
     product: "Web App",
-    usedTechnologies: "React HTML CSS Javascript",
-    latest: false,
+    usedTechnologies: "Javascript React HTML CSS ",
+    latest: true,
     image: codewomen,
-    left_light: mustard,
-    right_light: blue_green,
-    left_dark: lightmustard,
-    right_dark: lightblue_green,
   },
   {
     title: "Ela's Kitchen",
@@ -72,13 +50,9 @@ const projects = [
     date: "31-1-2020",
     client: "Personal",
     product: "Web App",
-    usedTechnologies: "React HTML CSS Javascript",
+    usedTechnologies: "Javascript React HTML CSS ",
     latest: true,
     image: elaskitchen,
-    left_light: blue,
-    right_light: blue_green,
-    left_dark: lightblue,
-    right_dark: lightblue_green,
   },
   {
     title: "Ela's Casino",
@@ -88,13 +62,9 @@ const projects = [
     date: "31-1-2020",
     client: "Personal",
     product: "Web App",
-    usedTechnologies: "React HTML CSS Javascript",
+    usedTechnologies: "Javascript React HTML CSS ",
     latest: true,
     image: elascasino,
-    left_light: red,
-    right_light: blue,
-    left_dark: lightred,
-    right_dark: lightblue,
   },
   {
     title: "Bookies",
@@ -104,29 +74,22 @@ const projects = [
     date: "31-1-2020",
     client: "Hackathon",
     product: "Web App",
-    usedTechnologies: "React Redux thunk HTML CSS Javascript",
+    usedTechnologies: "Javascript React Redux thunk HTML CSS ",
     latest: true,
     image: bookies,
-    left_light: blue,
-    right_light: pink,
-    left_dark: lightblue,
-    right_dark: lightpink,
   },
+
   {
-    title: "Wild Amsterdam",
+    title: "One Liners",
     specs:
-      "Wild Amsterdam is a static HTML page travel photo blog. It is built using HTML and bootstrap.",
-    url: "https://anuradhasivasubramanian.github.io/Wild-Amsterdam/index.html",
+      "Oneliners is a full stack app where users can submit oneliners. Users can also vote for their favourite vote. Oneliners is deployed using Heroku.",
+    url: "https://oneliners-fullstack.herokuapp.com/",
     date: "31-1-2020",
     client: "Personal",
-    product: "Static HTML Page",
-    usedTechnologies: "HTML CSS Javascript Bootstrap",
-    latest: true,
-    image: wildams,
-    left_light: blue,
-    right_light: red,
-    left_dark: lightblue,
-    right_dark: lightred,
+    product: "Web App",
+    usedTechnologies: "Javascript React HTML CSS ",
+    latest: false,
+    image: oneliner,
   },
 ];
 

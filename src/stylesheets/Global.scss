@@ -4,9 +4,12 @@ $mustard: #ffb000;
 $blue: #004fe7;
 $blue-green: #00b3b3;
 $red: #ff0013;
+$pastelpink: #f1dada;
+$grey: #b3b3b3;
 
 /*FONTS*/
 $font-roboto: "Roboto";
+$font-poppins: "Poppins", sans-serif;
 $font-alfa: "Alfa Slab One", cursive;
 $font-sourcecode: "Source Code Pro", monospace;
 $font-desc: "Abril Fatface", cursive;
@@ -22,22 +25,27 @@ $margin: 10px;
 $margin-sm: 5px;
 .dark_mode {
   background-color: black;
-  color: #b3b3b3;
+  color: $pastelpink;
 }
 .light_mode {
-  background-color: white;
+  background-color: $pastelpink;
   color: black;
 }
 .home--heading {
-  font-family: $font-alfa;
+  font-family: $font-poppins;
   text-align: right;
   font-size: $h2;
-  padding-top: $margin;
+  padding-top: 8%;
   padding-right: $margin;
 }
 @media screen and (min-width: 760px) {
   .home--heading {
     font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .home--heading {
+    font-size: 2em;
   }
 }
 html {
@@ -54,17 +62,27 @@ body {
 }
 
 .topline_d {
-  border-top: solid 3px #b3b3b3;
-
+  border-top: solid 3px $pastelpink;
   width: 100%;
+}
+.a_dark {
+  color: $pastelpink;
+}
+.a_light {
+  color: black;
 }
 
 .bottomline_d {
-  border-bottom: solid 3px #b3b3b3;
+  border-bottom: solid 3px $pastelpink;
+}
+.bottomline_thin_d {
+  border-bottom: solid 0.4px $pastelpink;
+}
+.bottomline_thin_l {
+  border-bottom: solid 0.4px black;
 }
 .topline_l {
   border-top: solid 3px black;
-
   width: 100%;
 }
 

@@ -46,18 +46,63 @@ export function About(props) {
         <div
           className={
             props.mode
-              ? "about--desc_skills dark_mode"
-              : "about--desc_skills light_mode"
+              ? "about--desc_skills dark_mode "
+              : "about--desc_skills light_mode "
           }
         >
-          <p className="about--desc_skills_p">Key Technical Skills</p>
+          <div
+            className={
+              props.mode
+                ? "about--desc_skills_text topline_d bottomline_d "
+                : "about--desc_skills_text topline_l bottomline_l "
+            }
+          >
+            {" "}
+            <p
+              className={
+                props.mode ? "about--desc_skills_p" : "about--desc_skills_p "
+              }
+            >
+              KEY SKILLS
+            </p>
+          </div>
+
           <ul className="about--desc_skills_ul">
-            <li>HTML, CSS, Bootstrap</li> <li>Javascript, React</li>
-            <li>Redux with Thunk</li>
-            <li>NodeJs (incl. Express REST API, Express Middlewares)</li>
-            <li>Familiar with mySQL</li>
-            <li>Version control - Git </li>
-            <li>TDD with Jest and Enzyme</li>
+            <li
+              className={props.mode ? "bottomline_thin_d" : "bottomline_thin_l"}
+            >
+              Javascript, React
+            </li>
+            <li
+              className={props.mode ? "bottomline_thin_d" : "bottomline_thin_l"}
+            >
+              Redux with Thunk
+            </li>
+            <li
+              className={props.mode ? "bottomline_thin_d" : "bottomline_thin_l"}
+            >
+              HTML, CSS, Bootstrap
+            </li>
+            <li
+              className={props.mode ? "bottomline_thin_d" : "bottomline_thin_l"}
+            >
+              NodeJs and Express
+            </li>
+            <li
+              className={props.mode ? "bottomline_thin_d" : "bottomline_thin_l"}
+            >
+              Familiar with mySQL
+            </li>
+            <li
+              className={props.mode ? "bottomline_thin_d" : "bottomline_thin_l"}
+            >
+              Version control - Git{" "}
+            </li>
+            <li
+              className={props.mode ? "bottomline_thin_d" : "bottomline_thin_l"}
+            >
+              TDD with Jest and Enzyme
+            </li>
           </ul>
         </div>
       </div>

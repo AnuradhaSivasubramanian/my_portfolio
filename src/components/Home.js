@@ -76,7 +76,9 @@ class Home extends React.Component {
         </div>
         <div
           className={
-            this.props.mode ? "home--desc dark_mode" : "home--desc light_mode"
+            this.props.mode
+              ? "home--desc dark_mode bottomline_d"
+              : "home--desc light_mode bottomline_l"
           }
         >
           <div className="home--desc_summary">

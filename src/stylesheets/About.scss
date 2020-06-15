@@ -7,35 +7,47 @@
 .about--desc {
   -webkit-flex-grow: 1;
   flex-grow: 1;
-
   width: 100%;
   display: flex;
   flex-direction: column;
 
   &_summary {
-    margin-top: $margin;
+    margin-top: 50px;
     width: 80%;
     display: flex;
     align-self: center;
     justify-items: center;
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 1.1em;
+    line-height: 1.4;
   }
   &_skills {
-    margin-top: $margin;
-    width: 80%;
+    margin-top: 30px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-self: center;
     justify-items: center;
-    font-size: 1.2em;
+    font-size: 1em;
 
     &_p {
+      margin-left: $margin;
       font-weight: bold;
     }
     &_ul {
-      margin: $margin;
+      list-style: none;
+      font-size: 1.1em;
+      line-height: 2.4;
+      margin-top: 30px;
+      margin-left: 0;
+      width: 80%;
     }
+  }
+}
+//laptops
+@media screen and (min-width: 750px) {
+  .about--desc_skills_ul {
+    margin-top: 50px;
+    width: 35%;
   }
 }
 @media screen and (min-width: 760px) {
@@ -51,11 +63,14 @@
 .about--links {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: right;
+  justify-content: flex-end;
+  padding-right: $margin;
+  padding-bottom: 20px;
 }
 .about--link_image {
-  padding: $margin;
+  padding-right: $margin;
+
   width: 40px;
   &_d {
     padding: $margin;
