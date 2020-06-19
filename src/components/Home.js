@@ -91,6 +91,7 @@ class Home extends React.Component {
             <Latest />
           </div>
         </div>
+        <div className="home--animation_wrapper"></div>
       </div>
     );
   }

@@ -127,6 +127,7 @@ export function About(props) {
           />
         </a>
       </div>
+
       {/*
       <div>
         Icons made by{" "}

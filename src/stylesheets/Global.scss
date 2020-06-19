@@ -89,3 +89,25 @@ body {
 .bottomline_l {
   border-bottom: solid 3px black;
 }
+
+.home--animation_wrapper {
+  background-color: $pastelpink;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+  animation: crawldown forwards 1s ease-out;
+  pointer-events: none;
+}
+
+@keyframes crawldown {
+  0% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-150%);
+    transform: translateY(-150%);
+  }
+}
