@@ -40,14 +40,7 @@ class Home extends React.Component {
       setTimeout(this.counter1, 3);
     }
   };
-  counter2 = () => {
-    let newtitle = [...this.state.finaltitle];
-    newtitle[this.state.index] = String.fromCharCode(
-      Math.floor(Math.random() * 25) + 66
-    );
-    this.setState({ finaltitle: [...newtitle] });
-    // setTimeout(this.counter2, 400);
-  };
+
   render() {
     return (
       <div className="home--wrapper">
