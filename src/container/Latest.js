@@ -6,6 +6,7 @@ import { rightArrow } from "../actions/rightArrow";
 import Right from "../images/rightarrow.svg";
 import { Link } from "react-router-dom";
 import "../stylesheets/Latest.scss";
+
 function Latest(props) {
   const [leftClick, setleftClick] = useState(false);
   const [rightClick, setrightClick] = useState(false);
@@ -23,7 +24,6 @@ function Latest(props) {
           onClick={() => {
             props.dispatch(leftArrow());
             setleftClick(true);
-
             setTimeout(() => {
               setleftClick(false);
               setrightClick(false);

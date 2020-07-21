@@ -1,5 +1,5 @@
 const initialState = {
-  dark: sessionStorage.getItem("dark_mode") === "false" ? false : true,
+  dark: sessionStorage.getItem("dark_mode") === "false" ? true : false,
 };
 
 export default function (state = initialState, action) {
